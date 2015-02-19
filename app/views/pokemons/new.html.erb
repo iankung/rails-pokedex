@@ -1,8 +1,27 @@
 <h1> Our form to create a pokemon </h1>
+
+
+
+<%= simple_form_for Pokemon.new do |f| %> <!--auto redirect to show-->
+  <%= f.input :name %>
+  <%= f.input :description %>
+  <%= f.button :submit %>
+<% end %>
+
+
+
+
+
+<%
+=begin %> 
+<!--begin comment-->
+
 <%= form_for Pokemon.new, url: pokemons_path do |f| %> <!--url can be this or {action:"create"}, url sends to pokemon#create-->
   Title: <%= f.text_field :name %>
   Description: <%= f.text_area :description %>
   <%= f.submit "Create" %>
 <% end %>
 
-
+<%
+=end %> 
+<!--end comment-->
