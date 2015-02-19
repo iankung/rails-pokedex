@@ -1,0 +1,8 @@
+<h1> Our form to create a pokemon </h1>
+<%= form_for Pokemon.new, url: pokemons_path do |f| %> <!--url can be this or {action:"create"}, url sends to pokemon#create-->
+  Title: <%= f.text_field :name %>
+  Description: <%= f.text_area :description %>
+  <%= f.submit "Create" %>
+<% end %>
+
+

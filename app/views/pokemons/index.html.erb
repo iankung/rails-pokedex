@@ -1,0 +1,16 @@
+
+<h1> Your Pokedex </h1>
+
+<%= link_to 'Add new pokemon', new_pokemon_path %>
+
+<% @pokemons.each do |pokemon| %>
+  <tr>
+    <h3>Name:</h3>
+    <td><%= pokemon.name %></td> 
+    <h3>Description:</h3>
+    <td><%= pokemon.description %></td>
+    </br>
+    </br>
+  </tr>
+<% end %>
+
